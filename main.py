@@ -37,7 +37,7 @@ try:
         logging.info("Google Generative AI configured.")
 
 except Exception as e:
-    logging.error(f"Could not configure Google Generative AI: {e}")
+    logging.error(f"Could not configure Google Generative AI:
 
 
 def download_file(url, save_path):
