@@ -37,7 +37,7 @@ try:
         logging.info("Google Generative AI configured.")
 
 except Exception as e:
-    logging.error(f"Could not configure Google Generative AI: {e}")
+    logging.error(f"Could not configure Google Generative AI:
 
 
 def download_file(url, save_path):
@@ -88,6 +88,7 @@ def process_document():
 
     doc_url = data["documents"]
     questions = data["questions"]
+    print("these are the ques: ", questions)
 
     # Generate a unique filename to avoid conflicts
     pdf_path = f"temp_document_{uuid.uuid4()}.pdf"
