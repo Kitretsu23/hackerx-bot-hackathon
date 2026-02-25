@@ -46,6 +46,7 @@ def download_file(url, save_path):
         logging.info(f"Downloading document from {url}")
         response = requests.get(url, stream=True)
         response.raise_for_status()
+        print("this is edited")
         with open(save_path, "wb") as f:
             for chunk in response.iter_content(chunk_size=8192):
                 f.write(chunk)
@@ -79,6 +80,7 @@ def process_document():
         ), 500
 
     data = request.get_json()
+    print("this is feature login branch")
     if not data or "documents" not in data or "questions" not in data:
         return jsonify(
             {"error": "Invalid request body. 'documents' and 'questions' are required."}
